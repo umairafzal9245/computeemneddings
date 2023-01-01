@@ -20,6 +20,9 @@ OUTPUT_PATH = os.path.join(
     CURRENT_PATH, "resnet_speaker_encoder_training_output/"
 )  # path to save the train logs and checkpoint
 CONFIG_OUT_PATH = os.path.join(OUTPUT_PATH, "config_se.json")
+
+
+
 RESTORE_PATH = None  # Checkpoint to use for transfer learning if None ignore
 
 # instance the config
@@ -129,9 +132,10 @@ config.audio_augmentation = {
     "gaussian": {"p": 0.7, "min_amplitude": 0.0, "max_amplitude": 1e-05},
 }
 
+
+
 config.save_json(CONFIG_OUT_PATH)
 
-print(CONFIG_OUT_PATH)
 # if RESTORE_PATH is not None:
 #     command = f"python TTS/bin/train_encoder.py --config_path {CONFIG_OUT_PATH} --restore_path {RESTORE_PATH}"
 # else:

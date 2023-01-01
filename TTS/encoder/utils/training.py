@@ -8,7 +8,7 @@ from trainer.logging.console_logger import ConsoleLogger
 
 from TTS.config import load_config, register_config
 
-from TTS.tts.utils.text.characters import parse_symbols
+# from TTS.tts.utils.text.characters import parse_symbols
 
 from TTS.utils.generic_utils import get_experiment_folder_path, get_git_branch
 from TTS.utils.io import copy_model_files
@@ -78,9 +78,9 @@ def process_args(args, config=None):
         # if model characters are not set in the config file
         # save the default set to the config file for future
         # compatibility.
-        if config.has("characters") and config.characters is None:
-            used_characters = parse_symbols()
-            new_fields["characters"] = used_characters
+        # if config.has("characters") and config.characters is None:
+        #     used_characters = parse_symbols()
+        #     new_fields["characters"] = used_characters
         copy_model_files(config, experiment_path, new_fields)
         dashboard_logger = logger_factory(config, experiment_path)
     c_logger = ConsoleLogger()
