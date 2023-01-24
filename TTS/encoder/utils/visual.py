@@ -1,7 +1,7 @@
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
-import umap
+import umap.umap_ as umap
 
 matplotlib.use("Agg")
 
