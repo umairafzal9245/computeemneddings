@@ -1,2 +1,2 @@
-./datasets
-./computeemneddings/resnet_speaker_encoder_training_output
+computeemneddings/datasets
+computeemneddings/resnet_speaker_encoder_training_output
